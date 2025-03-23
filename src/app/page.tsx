@@ -61,7 +61,13 @@ function Main() {
               getSongsMutation();
             }}
           >
-            <Input required type="text" placeholder="Cloudy..." />
+            <Input
+              required
+              type="text"
+              placeholder="Cloudy..."
+              value={recommendations}
+              onChange={(e) => setRecommendations(e.target.value)}
+            />
 
             <Button
               className="w-full bg-purple-700 disabled:bg-purple-800 hover:cursor-pointer hover:bg-purple-500 font-medium"
