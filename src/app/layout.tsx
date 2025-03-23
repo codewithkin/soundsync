@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Poppins } from "next/font/google";
 import { Toaster } from "sonner";
+import { QueryClientProviderWrapper } from "@/providers/QueryClientProvider";
 
 export const metadata: Metadata = {
   title: "SoundSync",
@@ -20,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.className} antialiased`}>
-        {children}
+        <QueryClientProviderWrapper>{children}</QueryClientProviderWrapper>
         <Toaster richColors expand visibleToasts={5} />
       </body>
     </html>
