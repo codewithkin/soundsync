@@ -38,15 +38,20 @@ function Main() {
   });
 
   return (
-    <section>
-      <Card>
-        <CardHeader>
-          <CardTitle>Hi there !</CardTitle>
-          <CardDescription>What's today's mood ?</CardDescription>
+    <section className="flex flex-col items-center justify-center h-screen">
+      <Card className="border border-purple-300">
+        <CardHeader className="text-center">
+          <CardTitle className="text-2xl bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
+            Hi there !
+          </CardTitle>
+          <CardDescription className="text-md">
+            What's today's mood ?
+          </CardDescription>
         </CardHeader>
 
         <CardFooter>
           <form
+            className="flex flex-col gap-2 items-center items-center"
             onSubmit={(e) => {
               e.preventDefault();
 
@@ -54,9 +59,13 @@ function Main() {
               getSongsMutation();
             }}
           >
-            <Input type="text" required />
+            <Input required type="text" placeholder="Cloudy..." />
 
-            <Button disabled={loading} type="submit">
+            <Button
+              className="w-full bg-purple-700 disabled:bg-purple-800 hover:cursor-pointer hover:bg-purple-500 font-medium"
+              disabled={loading}
+              type="submit"
+            >
               {loading ? "Getting recommendations..." : "Recommend some music"}
             </Button>
           </form>
