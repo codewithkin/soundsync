@@ -12,7 +12,7 @@ import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
 import { useState } from "react";
 import { toast } from "sonner";
-import { Headphones } from "lucide-react";
+import { Headphones, Loader2 } from "lucide-react";
 
 function Main() {
   const [mood, setMood] = useState("");
@@ -74,6 +74,7 @@ function Main() {
               disabled={loading}
               type="submit"
             >
+              {loading && <Loader2 size={20} />}
               {loading ? "Getting recommendations..." : "Recommend some music"}
             </Button>
           </form>
