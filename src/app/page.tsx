@@ -12,6 +12,7 @@ import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
 import { useState } from "react";
 import { toast } from "sonner";
+import { Headphones } from "lucide-react";
 
 function Main() {
   const [mood, setMood] = useState("");
@@ -40,7 +41,8 @@ function Main() {
   return (
     <section className="flex flex-col items-center justify-center h-screen">
       <Card className="border border-purple-300">
-        <CardHeader className="text-center">
+        <CardHeader className="text-center flex flex-col justify-between items-center">
+          <Headphones size={50} className="text-purple-600" />
           <CardTitle className="text-2xl bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
             Hi there !
           </CardTitle>
