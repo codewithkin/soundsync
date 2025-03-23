@@ -74,7 +74,7 @@ function Main() {
               disabled={loading}
               type="submit"
             >
-              {loading && <Loader2 size={20} />}
+              {loading && <Loader2 className="animate-spin" size={20} />}
               {loading ? "Getting recommendations..." : "Recommend some music"}
             </Button>
           </form>
