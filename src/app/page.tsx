@@ -65,8 +65,8 @@ function Main() {
               required
               type="text"
               placeholder="Cloudy..."
-              value={recommendations}
-              onChange={(e) => setRecommendations(e.target.value)}
+              value={mood}
+              onChange={(e) => setMood(e.target.value)}
             />
 
             <Button
