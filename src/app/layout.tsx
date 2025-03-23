@@ -3,13 +3,13 @@ import "./globals.css";
 import { Poppins } from "next/font/google";
 
 export const metadata: Metadata = {
-  title: "SoundSynd",
+  title: "SoundSync",
 };
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["200", "400", "600", "800"]
-})
+  weight: ["200", "400", "600", "800"],
+});
 
 export default function RootLayout({
   children,
@@ -18,11 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${poppins.className} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${poppins.className} antialiased`}>{children}</body>
     </html>
   );
 }
